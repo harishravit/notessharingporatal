@@ -1,6 +1,7 @@
+import Main from "@/layout/Main"
 const App = () => {
   return (
-    <div>App</div>
+    <Main/>
   )
 }
 
