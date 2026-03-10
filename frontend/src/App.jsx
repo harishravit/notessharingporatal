@@ -1,8 +1,10 @@
-import Main from "@/layout/Main"
-const App = () => {
-  return (
-    <Main/>
+import Header from "./components/layout/Header";
+
+const App=()=>{
+  return(
+    <main className="light container">
+     <Header/>
+    </main>
   )
 }
-
-export default App
+export default App;

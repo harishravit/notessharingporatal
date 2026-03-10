@@ -1,0 +1,193 @@
+:root {
+  --space-40: 40px;
+  --space-32: 32px;
+  --space-24: 24px;
+  --space-16: 16px;
+  --space-12: 12px;
+  --space-8: 8px;
+  --space-4: 4px;
+  --fs-h1: 3.815rem;
+  --fs-h2: 3.052rem;
+  --fs-h3: 2.441rem;
+  --fs-h4: 1.953rem;
+  --fs-h5: 1.563rem;
+  --fs-h6: 1.25rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-xs: 0.75rem;
+  --fs-btn-lg: 1.125rem;
+  --fs-btn-md: 1rem;
+  --Heading-1: 800 var(--fs-h1)/ calc(var(--fs-h1)*1.2) "Poppins",
+    sans-serif;
+  --Heading-2: 600 var(--fs-h2)/calc(var(--fs-h2)*1.2) "Poppins",
+    sans-serif;
+  --Heading-3: 500 var(--fs-h3)/ calc(var(--fs-h3)*1.2) "Poppins",
+    sans-serif;
+  --Heading-4: 500 var(--fs-h4)/ calc(var(--fs-h4)*1.4)"Poppins",
+    sans-serif;
+  --Heading-5: 500 var(--fs-h5)/ calc(var(--fs-h5)*1.4) "Poppins",
+    sans-serif;
+  --Heading-6: 500 var(--fs-h6)/ calc(var(--fs-h6)*1.4) "Poppins",
+    sans-serif;
+  --body: 400 var(--fs-body)/ calc(var(--fs-body)*1.6) "Poppins",
+    sans-serif;
+  --Small: 400 var(--fs-small)/ calc(var(--fs-small)*1.6) "Poppins",
+    sans-serif;
+  --Extrasmall: 400 0.75rem/24px "Poppins",
+    sans-serif;
+  --Button-lg: 500 var(--fs-btn-lg)/ 24px "Poppins",
+    sans-serif;
+  --Button-md: 500 var(--fs-btn-md)/24px "Poppins",
+    sans-serif;
+  --pad-lg: var(--space-12) var(--space-24);
+  --pad-md: var(--space-8) var(--space-16);
+
+}
+
+.dark {
+  --background: hsla(0, 0%, 8%, 1);
+  --ontainer: hsla(0, 0%, 14%, 1);
+  --text-soft: hsla(0, 0%, 55%, 1);
+  --icon-soft: hsla(0, 0%, 72%, 1);
+  --primary: hsla(0, 0%, 95%, 1);
+  --Secondry: hsla(0, 0%, 25%, 1);
+  --hover: hsla(0, 0%, 33%, 1);
+  --activate: hsla(0, 0%, 85%, 1);
+}
+
+.light {
+  --background: hsla(0, 0%, 88%, 1);
+  --container: hsla(0, 0%, 95%, 1);
+  --text-soft: hsla(0, 0%, 34%, 1);
+  --icon-soft: hsla(0, 0%, 20%, 1);
+  --primary: hsla(0, 0%, 8%, 1);
+  --Secondry: hsla(0, 0%, 80%, 1);
+  --hover: hsla(0, 0%, 85%, 1);
+  --activate: hsla(0, 0%, 12%, 1);
+}
+/* flex&grid */
+.d-flx {
+  display: flex;
+  border: 1px solid;
+}
+
+.y-center {
+  justify-content: center;
+}
+
+.x-center {
+  align-items: center;
+}
+
+.xy-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.fd-row {
+  flex-direction: row;
+}
+
+.fd-col {
+  flex-direction: column;
+}
+
+.x-gap-8 {
+  row-gap: var(--space-8);
+}
+
+.x-gap-12 {
+  row-gap: var(--space-12);
+}
+
+.x-gap-24 {
+  row-gap: var(--space-24);
+}
+
+.y-gap-8 {
+  column-gap: var(--space-8);
+}
+
+.y-gap-12 {
+  column-gap: var(--space-12);
+}
+
+.y-gap-24 {
+  column-gap: var(--space-24);
+}
+
+.y-gap-auto {
+  justify-content: space-between;
+}
+
+.flx-g-1 {
+  flex: 1;
+}
+.d-grd {
+  display: grid;
+}
+
+/* width&height */
+.lh_0{
+  line-height: 0;
+}
+.wd-auto {
+  width: auto;
+}
+
+.ht-auto {
+  height: auto;
+}
+
+.wd\:full {
+  width: 100%;
+}
+
+.ht\:full {
+  height: 100%;
+}
+
+.wd\:fit {
+  width: fit-content;
+}
+.ht\:fit{
+  height: fit-content;
+}
+/* position */
+.pos\:rel{
+  position: relative;
+}
+/* padding */
+.pad_lg{
+  padding:var(--pad-lg);
+}
+.pad_md{
+  padding:var(--pad-md);
+}
+
+/* colors */
+.text-soft{
+  color: var(--text-soft);
+}
+/* border-radius */
+.rad-4{
+  border-radius: var(--space-4);
+}
+.rad-8{
+  border-radius: var(--space-8);
+}
+.rad-12{
+  border-radius: var(--space-12);
+}
+.rad-16{
+  border-radius: var(--space-16);
+}
+.rad-24{
+  border-radius: var(--space-24);
+}
+.rad-32{
+  border-radius: var(--space-32);
+}
+.rad-40{
+  border-radius: var(--space-40);
+}

@@ -1,0 +1,12 @@
+.search_box{
+    background-color: var(--container);
+    font: var(--Heading-6);
+    color: var(--text-soft);
+    padding: var(--space-8) var(--space-16) var(--space-8) var(--space-8);
+}
+.search_input{
+    all: unset;
+    font: var(--body);
+    line-height: 24px;
+    width: 100%;
+}
