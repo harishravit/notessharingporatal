@@ -4,12 +4,10 @@
     color: var(--activate);
     font-weight: bold;
     letter-spacing: clamp(-1px, 2vw, -2.5px);
-    height:clamp(32px,4vw,40px)
 }
 
 .logo_wrapper {
     display: inline-block;
     height: clamp(28px, 2.55vw, 32px);
     width: clamp(28px, 2.55vw, 32px);
-    border: 1px solid red;
 }

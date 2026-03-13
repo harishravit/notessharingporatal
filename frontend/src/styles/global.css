@@ -5,27 +5,59 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  line-height: 0;
 }
 
-html,
 body {
   height: 100%;
   width: 100%;
   overflow: hidden;
   min-width: 320px;
+  background-color: var(--background);
+  transition: background-color 40ms ease-in, color 30ms ease-in;
 }
 
 .container {
   width: 100%;
   max-width: 92vw;
   margin: 16px auto;
-  border: 1px solid red;
   height: 94vh;
 }
 
 .header {
-  flex-direction: column;
-  width: 100%;
-  min-width: 320px;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-areas:
+    "logo togglebox icon"
+    "search search search";
+  column-gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.tooglebox {
+  grid-area: togglebox;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.icon {
+  grid-area: icon;
+}
+
+.search {
+  grid-area: search;
+}
+
+@media (min-width:640px) {
+  .header {
+
+    grid-template-columns: auto 1fr auto auto;
+
+    grid-template-areas:
+      "logo search togglebox icon";
+
+  }
 }
