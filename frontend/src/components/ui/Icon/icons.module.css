@@ -1,0 +1,13 @@
+.icon_box{
+    width: 2rem;
+    height: auto;
+    padding: 4px;
+    color:var(--text-soft);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 40ms ease,background-color 60ms ease;
+}
+.icon_box:hover{
+    color: var(--activate);
+    background-color: var(--Secondry);
+}

@@ -1,0 +1,22 @@
+.search_box {
+    background-color: var(--container);
+    font: var(--Heading-6);
+    color: var(--text-soft);
+    padding: var(--space-2) var(--space-4) var(--space-2) var(--space-2);
+    width: 100%;
+    box-shadow: var(--bs);
+    border: none;
+}
+
+.search_input {
+    all: unset;
+    font-size: 1rem;
+    width: 100%;
+    line-height: 1;
+}
+.search_input::placeholder{
+    color:var(--text-soft)
+}
+.search_input:valid{
+    color: var(--activate);
+}

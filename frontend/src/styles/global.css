@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  line-height: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  min-width: 320px;
+  background-color: var(--background);
+  transition: background-color 40ms ease-in, color 30ms ease-in;
+}
+
+.container {
+  width: 100%;
+  max-width: 92vw;
+  margin: 16px auto;
+  height: 94vh;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-areas:
+    "logo togglebox icon"
+    "search search search";
+  column-gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tooglebox {
+  grid-area: togglebox;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.icon {
+  grid-area: icon;
+}
+
+.search {
+  grid-area: search;
+}
+
+@media (min-width:640px) {
+  .header {
+
+    grid-template-columns: auto 1fr auto auto;
+
+    grid-template-areas:
+      "logo search togglebox icon";
+
+  }
+}

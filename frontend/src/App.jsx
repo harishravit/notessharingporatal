@@ -1,7 +1,10 @@
-const App = () => {
-  return (
-    <div>App</div>
+import Header from "./components/layout/Header";
+
+const App=()=>{
+  return(
+    <main className="light container">
+     <Header/>
+    </main>
   )
 }
-
-export default App
+export default App;

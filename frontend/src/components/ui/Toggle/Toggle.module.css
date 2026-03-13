@@ -1,0 +1,16 @@
+.toggle{
+    width: 24px;
+    height: 24px;
+    padding: 16px;
+    color: var(--text-soft);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    transition: background-color 40ms ease,color 18ms ease;
+}
+.toggle:hover{
+    color: var(--activate);
+    background-color: var(--Secondry);
+}
