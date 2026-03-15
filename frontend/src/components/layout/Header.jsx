@@ -1,8 +1,8 @@
 import { AppLogo } from "assets";
-import { Searchbar, Icon, Toggletheme } from "components";
+import { Searchbar, Iconwrapper,Profile } from "components";
 const Header = () => {
     return (
-        <header className="d-grd wd:full y-gap-24 x-gap-8 header">
+        <header className="header">
             <AppLogo />
             <Searchbar>
                 <Searchbar.Icon>
@@ -10,10 +10,8 @@ const Header = () => {
                 </Searchbar.Icon>
                 <Searchbar.Input Placeholder="Search here.." />
             </Searchbar>
-            <div className="d-flx wd:full y-gap-12">
-                <Toggletheme />
-                <Icon iconName="notifications" />
-            </div>
+            <Iconwrapper/>
+            <Profile icon={true} imgData="./src/assets/Images/man-1.jpeg"/>
         </header>
     )
 }

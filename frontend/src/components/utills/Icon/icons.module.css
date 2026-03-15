@@ -1,0 +1,15 @@
+.icon_box {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    color: var(--text-soft);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 40ms ease, background-color 60ms ease;
+    border-radius: var(--space-5);
+    user-select: none;
+    position: relative;
+}

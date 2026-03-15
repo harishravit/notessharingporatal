@@ -6,11 +6,16 @@
     width: 100%;
     box-shadow: var(--bs);
     border: none;
+    display: flex;
+    align-items: center;
+    column-gap: var(--space-2);
+    border-radius: var(--space-5);
+    box-shadow: var(--bs);
 }
 
 .search_input {
     all: unset;
-    font-size: 1rem;
+    font-size: 0.85rem;
     width: 100%;
     line-height: 1;
 }
@@ -18,5 +23,8 @@
     color:var(--text-soft)
 }
 .search_input:valid{
-    color: var(--activate);
+    color: var(--primary);
+}
+.search_box:has(.search_input:focus){
+    outline: 2px solid var(--primary);
 }

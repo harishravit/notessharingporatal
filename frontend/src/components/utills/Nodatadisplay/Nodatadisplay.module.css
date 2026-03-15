@@ -1,0 +1,19 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content>h4{
+    color: var(--text-soft);
+    font: var(--Heading-4);
+}
+.content>p{
+    font: var(--body);
+    color: var(--text-soft);
+}
+.displaybox{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: var(--space-1);
+}

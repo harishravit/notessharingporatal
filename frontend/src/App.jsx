@@ -1,9 +1,14 @@
-import Header from "./components/layout/Header";
+import { Header, Mainbox, Sidebar,Noteswrapper } from "layout";
+import {Routes,Route} from "react-router-dom";
 
-const App=()=>{
-  return(
+const App = () => {
+  return (
     <main className="light container">
-     <Header/>
+      <Header />
+      <section className="content_box">
+        <Sidebar />
+        <Mainbox />
+      </section>
     </main>
   )
 }
