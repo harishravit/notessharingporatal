@@ -6,6 +6,80 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   line-height: 0;
+  border: none;
+}
+
+:root {
+  --space-7: 40px;
+  --space-6: 32px;
+  --space-5: 24px;
+  --space-4-5: 20px;
+  --space-4: 16px;
+  --space-3-5: 14px;
+  --space-3: 12px;
+  --space-2-5: 10px;
+  --space-2: 8px;
+  --space-1-5: 6px;
+  --space-1: 4px;
+  --fs-h1: 3.815rem;
+  --fs-h2: 3.052rem;
+  --fs-h3: 2.441rem;
+  --fs-h4: 1.953rem;
+  --fs-h5: 1.563rem;
+  --fs-h6: 1.25rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-xs: 0.75rem;
+  --fs-btn-lg: 1.125rem;
+  --fs-btn-md: 1rem;
+  --Heading-1: 800 var(--fs-h1)/1.2 "Poppins",
+    sans-serif;
+  --Heading-2: 600 var(--fs-h2)/1.2 "Poppins",
+    sans-serif;
+  --Heading-3: 500 var(--fs-h3)/ 1.3"Poppins",
+    sans-serif;
+  --Heading-4: 500 var(--fs-h4)/ 1.3"Poppins",
+    sans-serif;
+  --Heading-5: 500 var(--fs-h5)/ 1.4 "Poppins",
+    sans-serif;
+  --Heading-6: 500 var(--fs-h6)/ 1.4 "Poppins",
+    sans-serif;
+  --body: 400 var(--fs-body)/ 1.6 "Poppins",
+    sans-serif;
+  --Small: 400 var(--fs-small)/ 1.65 "Poppins",
+    sans-serif;
+  --Extrasmall: 400 0.75rem/1 "Poppins",
+    sans-serif;
+  --Button-lg: 500 var(--fs-btn-lg)/ 1 "Poppins",
+    sans-serif;
+  --Button-md: 500 var(--fs-btn-md)/1 "Poppins",
+    sans-serif;
+  --pad-lg: var(--space-3) var(--space-5);
+  --pad-md: var(--space-2) var(--space-4);
+}
+
+html.light {
+  --background: hsla(0, 0%, 88%, 1);
+  --container: hsla(0, 0%, 95%, 1);
+  --text-soft: hsla(0, 0%, 39%, 1);
+  --text-mid-soft: hsla(0, 0%, 12%, 1);
+  --primary: hsla(0, 0%, 8%, 1);
+  --Secondry: hsla(0, 0%, 80%);
+  --hover: hsla(0, 0%, 85%, 1);
+  --activate: hsla(0, 0%, 8%, 1);
+  --bs: 0px 4px 8px rgba(0, 0, 0, 0.097);
+}
+
+html.dark {
+  --background: hsla(0, 0%, 8%, 1);
+  --container: hsla(0, 0%, 14%, 1);
+  --text-soft: hsla(0, 0%, 63%, 1);
+  --text-mid-soft: hsla(0, 0%, 80%, 1);
+  --primary: hsla(0, 0%, 95%, 1);
+  --Secondry: hsla(0, 0%, 25%, 1);
+  --hover: hsla(0, 0%, 33%, 1);
+  --activate: hsla(0, 0%, 8%, 1);
+  
 }
 
 body {
@@ -17,22 +91,54 @@ body {
   transition: background-color 40ms ease-in, color 30ms ease-in;
 }
 
+.isActivate>a {
+  color: var(--primary) !important;
+}
+
 .container {
   width: 100%;
   max-width: 92vw;
   margin: 16px auto;
   height: 94vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-3);
 }
 
 .header {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: auto 1fr auto;
   grid-template-areas:
-    "logo togglebox icon"
+    "logo tooglebox togglebox"
     "search search search";
-  column-gap: 12px;
+  column-gap: var(--space-3);
+  row-gap: var(--space-2);
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  min-width: 320px;
+}
+
+.Sidebar {
+  width: 100%;
+  height: 100%;
+  background-color: var(--container);
+  padding: var(--space-4);
+  border-radius: var(--space-4);
+  box-shadow: var(--bs);
+}
+
+.main_side {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: var(--space-3);
+}
+
+.main_side>span {
+  font: var(--Extrasmall);
+  text-transform: uppercase;
+  line-height: 1;
 }
 
 .tooglebox {
@@ -47,17 +153,155 @@ body {
   grid-area: icon;
 }
 
+.icon_hover:hover {
+  background-color: var(--Secondry);
+  color: var(--primary);
+}
+
 .search {
   grid-area: search;
 }
 
-@media (min-width:640px) {
+.text-soft {
+  color: var(--text-soft);
+}
+
+.btn {
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  line-height: 1;
+  transition: background-color 100ms ease, color 70ms ease;
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px hsla(var(--primary), 0.6%);
+  }
+}
+
+.content_box {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 100% 100%;
+  column-gap: 24px;
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+  border-radius: var(--space-3);
+  overflow: hidden;
+  align-content: flex-start;
+}
+
+.main_wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-2);
+  height: 100%;
+  max-width: 100%;
+}
+
+.bread_cumb>ul>li {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  column-gap: var(--space-1-5);
+}
+
+.bread_cumb>ul>li a {
+  text-decoration: none;
+  color: var(--text-soft);
+  cursor: pointer;
+  font: var(--Heading-6);
+  transition: all 120ms ease;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--activate);
+    color: var(--activate);
+  }
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-4);
+  align-content: flex-start;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.empty_notes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--container);
+  border-radius: var(--space-4);
+  box-shadow: var(--bs);
+  position: relative;
+  overflow: hidden;
+}
+
+
+.icon_tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-2-5) !important;
+}
+
+.texthide {
+  display: none;
+}
+
+.title {
+  font: var(--Heading-6);
+  color: var(--text-mid-soft);
+}
+
+.des {
+  font: var(--Extrasmall);
+  color: var(--text-mid-soft);
+  text-transform: uppercase;
+}
+
+.profile_wrapper {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 2px;
+  height: 100%;
+  width: auto;
+}
+
+.profile_wrapper>img,
+.profile_box>img {
+  max-width: 100%;
+  width: 34px;
+  border-radius: 999px;
+  outline: 2px solid hsl(0, 0%, 55%);
+  /* outline-offset: 3px; */
+  padding: 2px;
+}
+
+@media (min-width:768px) {
+
   .header {
 
     grid-template-columns: auto 1fr auto auto;
 
     grid-template-areas:
-      "logo search togglebox icon";
+      "logo search togglebox";
+    row-gap: var(--space-2);
+  }
 
+  .content_box {
+    grid-template-columns: 230px 1fr;
+  }
+
+  .icon_tab {
+    justify-content: flex-start;
   }
 }

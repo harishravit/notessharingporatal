@@ -8,9 +8,5 @@
     align-items: center;
     user-select: none;
     cursor: pointer;
-    transition: background-color 40ms ease,color 18ms ease;
-}
-.toggle:hover{
-    color: var(--activate);
-    background-color: var(--Secondry);
+    border-radius: var(--space-5);
 }

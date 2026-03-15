@@ -9,8 +9,8 @@ const Toggle = () => {
         document.documentElement.classList.add(theme)
     },[theme])
     return (
-        <div onClick={()=>setTheme(theme==="light"?"dark":"light")} className={`d-flx rad-24 tooglebox ${styles.toggle}`}>
-            <Icon iconName={theme==="light"?"dark_mode":"clear_day"}/>
+        <div  onClick={()=>setTheme(theme==="light"?"dark":"light")} className={`tooglebox ${styles.toggle} icon_hover`}>
+            <Icon hover={false} iconName={theme==="light"?"dark_mode":"clear_day"}/>
         </div>
     )
 }
