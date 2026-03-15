@@ -1,0 +1,12 @@
+.toggle{
+    width: 24px;
+    height: 24px;
+    padding: 16px;
+    color: var(--text-soft);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    border-radius: var(--space-5);
+}
